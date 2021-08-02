@@ -9,11 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Checkpoint">
-        <activity android:name=".MyAdapter"></activity>
+        <activity android:name=".Admin_AllRegistrations"></activity>
+        <activity android:name=".DisplayRegistrations" />
+        <activity android:name=".PoojaRegister" />
+        <activity android:name=".ShowActivityUser" />
+        <activity android:name=".MyAdapterUser" />
+        <activity android:name=".User" />
+        <activity android:name=".MyAdapter" />
         <activity android:name=".ShowActivity" />
         <activity android:name=".AddPooja" />
         <activity android:name=".Register" />
-        <activity android:name=".Login" />
         <activity android:name=".Admin" />
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -22,6 +27,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_80Jeicr0dG4uXD" />
     </application>
 
 </manifest>

@@ -66,7 +66,7 @@ public class Register extends AppCompatActivity {
                             userInfo.put("isUser", "1");
 
                             df.set(userInfo);
-
+                            df.collection("Registrations");
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
                             finish();
                         }
@@ -83,7 +83,7 @@ public class Register extends AppCompatActivity {
         goToLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), Login.class));
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
             }
         });
     }
@@ -95,7 +95,6 @@ public class Register extends AppCompatActivity {
         }else {
             valid = true;
         }
-
         return valid;
     }
 }

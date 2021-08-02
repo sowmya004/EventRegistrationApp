@@ -48,12 +48,5 @@ public class AddPooja extends AppCompatActivity
                 Toast.makeText(AddPooja.this, "Data inserted successfully", Toast.LENGTH_LONG).show();
             }
         });
-
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(AddPooja.this, ShowActivity.class));
-            }
-        });
     }
 }

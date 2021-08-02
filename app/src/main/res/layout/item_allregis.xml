@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="50">
+
+        <TextView
+            android:gravity="center"
+            android:text="Pooja Name"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/lv_pn"/>
+
+        <TextView
+            android:gravity="center"
+            android:text="Date"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/lv_pd"
+            android:layout_below="@+id/lv_pn"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="50">
+
+        <TextView
+            android:gravity="center"
+            android:text="User Name"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/lv_un"/>
+
+        <TextView
+            android:gravity="center"
+            android:text="User Phone"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/lv_up"
+            android:layout_below="@+id/lv_u"/>
+    </LinearLayout>
+
+</LinearLayout>

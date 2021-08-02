@@ -8,17 +8,6 @@
     android:background="#FBE6C2"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/p_date"
-        android:layout_width="248dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="Date"
-        android:inputType="date"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/p_price" />
 
     <TextView
         android:id="@+id/textView2"
@@ -33,13 +22,13 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.126" />
+        app:layout_constraintVertical_bias="0.069" />
 
     <EditText
         android:id="@+id/p_name"
-        android:layout_width="249dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="251dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="40dp"
         android:ems="10"
         android:hint="Pooja Name"
         android:inputType="textPersonName"
@@ -48,60 +37,61 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
+        android:id="@+id/p_price"
+        android:layout_width="253dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Price"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/p_name" />
+
+
+    <EditText
+        android:id="@+id/p_date"
+        android:layout_width="254dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Date"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/p_price" />
+
+    <EditText
         android:id="@+id/p_desc"
-        android:layout_width="249dp"
-        android:layout_height="88dp"
-        android:layout_marginBottom="208dp"
+        android:layout_width="255dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="184dp"
         android:ems="10"
         android:gravity="start|top"
         android:hint="Pooja Description"
         android:inputType="textMultiLine"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/p_date" />
 
     <Button
         android:id="@+id/btn_addp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="42dp"
         android:text="Add Pooja"
         app:backgroundTint="#F48B29"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/p_desc"
         app:layout_constraintVertical_bias="0.0" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="125dp"
-        android:layout_height="51dp"
-        android:text="View List"
-        app:backgroundTint="#6BA527"
-        tools:layout_editor_absoluteX="145dp"
-        tools:layout_editor_absoluteY="647dp" />
-
-    <EditText
-        android:id="@+id/p_price"
-        android:layout_width="248dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="Price"
-        android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/p_name" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="79dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

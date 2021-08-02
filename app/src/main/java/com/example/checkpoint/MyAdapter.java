@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -11,10 +13,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
+public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     ArrayList<Model> mList;
     Context context;
+    private View.OnClickListener mListener;
+
 
     public MyAdapter(Context context, ArrayList<Model> mList){
         this.mList = mList;
@@ -46,14 +50,18 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView name, price, date, desc;
+        Button delete;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            name= itemView.findViewById(R.id.pooja_name);
-            price= itemView.findViewById(R.id.pooja_price);
-            date= itemView.findViewById(R.id.pooja_date);
-            desc= itemView.findViewById(R.id.pooja_desc);
+            name = itemView.findViewById(R.id.pooja_name);
+            price = itemView.findViewById(R.id.pooja_price);
+            date = itemView.findViewById(R.id.pooja_date);
+            desc = itemView.findViewById(R.id.pooja_desc);
+            delete = itemView.findViewById(R.id.btn_delete);
+
         }
-    }
-}
+    }}
+
+

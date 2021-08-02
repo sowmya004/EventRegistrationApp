@@ -36,15 +36,11 @@
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/btn_delete"
-                android:layout_width="85dp"
-                android:layout_height="45dp"
-                android:layout_marginLeft="60dp"
-                android:width="20dp"
-                android:height="100dp"
-                android:text="Delete"
-                android:textSize="12sp" />
+            <ImageView
+                android:layout_width="105dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="80dp"
+                android:src="@drawable/arrow_forward" />
 
         </LinearLayout>
 
@@ -70,6 +66,13 @@
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="153dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="200dp"
+                android:layout_weight="1"
+                android:text="register" />
         </LinearLayout>
 
         <LinearLayout
