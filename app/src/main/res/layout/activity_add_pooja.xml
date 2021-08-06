@@ -5,7 +5,7 @@
     android:id="@+id/add_pooja"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FBE6C2"
+    android:background="#FFFFDD"
     tools:context=".MainActivity">
 
 
@@ -13,8 +13,9 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-smallcaps"
+        android:fontFamily="@font/montserrat"
         android:text="Add Pooja"
+        android:textColor="#E45826"
         android:textSize="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,9 +30,12 @@
         android:layout_width="251dp"
         android:layout_height="59dp"
         android:layout_marginTop="40dp"
+        android:backgroundTint="#E45826"
         android:ems="10"
+        android:fontFamily="@font/montserrat"
         android:hint="Pooja Name"
         android:inputType="textPersonName"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -41,9 +45,12 @@
         android:layout_width="253dp"
         android:layout_height="56dp"
         android:layout_marginTop="24dp"
+        android:backgroundTint="#E45826"
         android:ems="10"
+        android:fontFamily="@font/montserrat"
         android:hint="Price"
         android:inputType="numberDecimal"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/p_name" />
@@ -54,9 +61,12 @@
         android:layout_width="254dp"
         android:layout_height="56dp"
         android:layout_marginTop="24dp"
+        android:backgroundTint="#E45826"
         android:ems="10"
+        android:fontFamily="@font/montserrat"
         android:hint="Date"
         android:inputType="date"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,10 +78,13 @@
         android:layout_height="84dp"
         android:layout_marginTop="28dp"
         android:layout_marginBottom="184dp"
+        android:backgroundTint="#E45826"
         android:ems="10"
+        android:fontFamily="@font/montserrat"
         android:gravity="start|top"
         android:hint="Pooja Description"
         android:inputType="textMultiLine"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.512"
@@ -80,18 +93,19 @@
 
     <Button
         android:id="@+id/btn_addp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="184dp"
+        android:layout_height="58dp"
         android:layout_marginTop="42dp"
+        android:fontFamily="@font/montserrat"
         android:text="Add Pooja"
-        app:backgroundTint="#F48B29"
+        android:textSize="20dp"
+        app:backgroundTint="#BB371A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/p_desc"
         app:layout_constraintVertical_bias="0.0" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

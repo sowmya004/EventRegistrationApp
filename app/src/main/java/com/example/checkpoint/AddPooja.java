@@ -44,8 +44,10 @@ public class AddPooja extends AppCompatActivity
                 String date= pj_date.getText().toString().trim();
                 String desc= pj_desc.getText().toString().trim();
                 pl= new PoojaList(name, price, date, desc);
-                pl_ref.push().setValue(pl);
+                //pl_ref.push().setValue(pl);
+                pl_ref.child(name).setValue(pl);
                 Toast.makeText(AddPooja.this, "Data inserted successfully", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(getApplicationContext(),ShowActivity.class));
             }
         });
     }

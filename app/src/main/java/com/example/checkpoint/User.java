@@ -40,8 +40,6 @@ public class User extends AppCompatActivity {
                 startActivity(in);
             }
         });
-
-
     }
 }
 

@@ -4,30 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFDD"
     tools:context=".ShowActivity">
 
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="171dp"
-        android:layout_height="48dp"
-        android:paddingTop="10dp"
+        android:layout_width="295dp"
+        android:layout_height="57dp"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:paddingTop="5dp"
         android:text="My Registrations"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+        android:textColor="#F48B29"
+        android:textSize="28dp"
         app:layout_constraintEnd_toStartOf="@+id/recyclerView"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toEndOf="@+id/recyclerView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="409dp"
-        android:layout_height="709dp"
-        android:paddingTop="20dp"
+        android:layout_height="664dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/montserrat"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="50dp" />
+        tools:layout_editor_absoluteX="2dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

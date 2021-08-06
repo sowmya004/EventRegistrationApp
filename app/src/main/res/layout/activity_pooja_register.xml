@@ -1,61 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".PoojaRegister">
+    android:background="#FFFFDD"
+    android:layout_height="match_parent">
 
 
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    <TextView
+        android:id="@+id/pooja_details_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Pooja Details"
+        android:textColor="#BB371A"
+        android:textSize="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    <TextView
+        android:id="@+id/id_name"
+        android:layout_width="259dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="76dp"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text="Name"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pooja_details_heading" />
 
-        <TextView
-            android:id="@+id/id_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Name"
-            android:textColor="@color/black"
-            android:textSize="30sp" />
+    <TextView
+        android:id="@+id/id_price"
+        android:layout_width="260dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text="Price"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_name" />
 
-        <TextView
-            android:id="@+id/id_price"
-            android:layout_width="162dp"
-            android:layout_height="wrap_content"
-            android:text="Price"
-            android:textColor="@color/black"
-            android:textSize="30sp" />
+    <TextView
+        android:id="@+id/id_date"
+        android:layout_width="260dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text="Date"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_price" />
 
-        <TextView
-            android:id="@+id/id_date"
-            android:layout_width="164dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
-            android:text="Date"
-            android:textColor="@color/black"
-            android:textSize="30sp" />
+    <TextView
+        android:id="@+id/id_desc"
+        android:layout_width="280dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text="Description"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_date" />
 
-        <TextView
-            android:id="@+id/id_desc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="104dp"
-            android:text="Description"
-            android:textColor="@color/black"
-            android:textSize="30sp" />
-
-        <Button
-            android:id="@+id/pay"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Make Payment" />
-    </LinearLayout>
-
-
-</RelativeLayout>
+    <Button
+        android:id="@+id/pay"
+        android:layout_width="151dp"
+        android:layout_height="69dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Make Payment"
+        android:textSize="18dp"
+        app:backgroundTint="#E45826"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_desc" />
+</androidx.constraintlayout.widget.ConstraintLayout>

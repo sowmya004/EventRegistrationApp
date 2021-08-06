@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFDD"
     tools:context=".ShowActivity">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -11,6 +12,7 @@
         android:layout_width="409dp"
         android:layout_height="729dp"
         tools:layout_editor_absoluteX="1dp"
+        android:fontFamily="@font/montserrat"
         tools:layout_editor_absoluteY="1dp"
         tools:ignore="MissingConstraints" />
 
