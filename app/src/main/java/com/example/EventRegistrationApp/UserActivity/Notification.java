@@ -34,7 +34,7 @@ public class Notification extends AppCompatActivity {
         Intent intent = getIntent();
 //        String poojaname= intent.getStringExtra("nameINTENT");
 //        String poojadate = intent.getStringExtra("dateINTENT");
-        name.setText( getIntent().getStringExtra("nameINTENT")  + " On");
+        name.setText( getIntent().getStringExtra("nameINTENT"));
         date.setText( getIntent().getStringExtra("dateINTENT"));
 
         btnAdd.setOnClickListener(new View.OnClickListener() {

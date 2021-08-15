@@ -33,7 +33,7 @@
                 android:id="@+id/pooja_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="10dp"
                 android:text="Pooja 1"
                 android:textSize="17sp"
                 android:textStyle="bold" />
@@ -55,7 +55,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:text="Price:"
+                android:text="Price: ₹"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -63,7 +63,6 @@
                 android:id="@+id/pooja_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
                 android:text="250"
                 android:textSize="17sp"
                 android:textStyle="bold" />
@@ -94,7 +93,7 @@
                 android:id="@+id/pooja_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="10dp"
                 android:text="12/08/21"
                 android:textSize="17sp"
                 android:textStyle="bold" />
@@ -117,7 +116,7 @@
                 android:id="@+id/pooja_desc"
                 android:layout_width="221dp"
                 android:layout_height="72dp"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="10dp"
                 android:text="this is Pooja 1"
                 android:textSize="17sp"
                 android:textStyle="bold" />

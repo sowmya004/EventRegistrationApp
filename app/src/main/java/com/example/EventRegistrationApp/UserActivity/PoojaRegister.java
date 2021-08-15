@@ -62,7 +62,7 @@ public class PoojaRegister extends AppCompatActivity implements PaymentResultLis
         desc = findViewById(R.id.id_desc);
 
         name.setText("Pooja Name : " + getIntent().getStringExtra("nameINTENT"));
-        price.setText("Pooja Price : " + getIntent().getStringExtra("priceINTENT"));
+        price.setText("Pooja Price : ₹" + getIntent().getStringExtra("priceINTENT"));
         date.setText("Pooja Date : " + getIntent().getStringExtra("dateINTENT"));
         desc.setText("Description : " + getIntent().getStringExtra("descINTENT"));
 
