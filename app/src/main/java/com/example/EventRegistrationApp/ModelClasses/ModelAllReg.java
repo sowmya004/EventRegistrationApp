@@ -1,4 +1,4 @@
-package com.example.checkpoint;
+package com.example.EventRegistrationApp.ModelClasses;
 
 public class ModelAllReg {
     private String name;

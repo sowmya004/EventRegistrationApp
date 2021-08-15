@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.checkpoint">
+    package="com.example.EventRegistrationApp">
 
     <application
         android:allowBackup="true"
@@ -9,18 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Checkpoint">
-        <activity android:name=".Admin_AllRegistrations"></activity>
-        <activity android:name=".DisplayRegistrations" />
-        <activity android:name=".PoojaRegister" />
-        <activity android:name=".ShowActivityUser" />
-        <activity android:name=".MyAdapterUser" />
-        <activity android:name=".User" />
-        <activity android:name=".MyAdapter" />
-        <activity android:name=".ShowActivity" />
-        <activity android:name=".AddPooja" />
-        <activity android:name=".Register" />
-        <activity android:name=".Admin" />
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.EventRegistrationApp.UserActivity.Notification"></activity>
+        <activity android:name="com.example.EventRegistrationApp.AdminActivity.Admin_AllRegistrations" />
+        <activity android:name="com.example.EventRegistrationApp.UserActivity.DisplayRegistrations" />
+        <activity android:name="com.example.EventRegistrationApp.UserActivity.PoojaRegister" />
+        <activity android:name="com.example.EventRegistrationApp.UserActivity.ShowActivityUser" />
+        <activity android:name="com.example.EventRegistrationApp.AdapterClasses.MyAdapterUser" />
+        <activity android:name="com.example.EventRegistrationApp.UserActivity.User" />
+        <activity android:name="com.example.EventRegistrationApp.AdapterClasses.MyAdapter" />
+        <activity android:name="com.example.EventRegistrationApp.AdminActivity.ShowActivity" />
+        <activity android:name="com.example.EventRegistrationApp.AdminActivity.AddPooja" />
+        <activity android:name="com.example.EventRegistrationApp.LoginCreateAccount.Register" />
+        <activity android:name="com.example.EventRegistrationApp.AdminActivity.Admin" />
+        <activity android:name="com.example.EventRegistrationApp.LoginCreateAccount.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

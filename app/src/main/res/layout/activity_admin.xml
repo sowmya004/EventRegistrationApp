@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFDD"
-    tools:context=".MainActivity">
+    tools:context=".LoginCreateAccount.MainActivity">
 
     <Button
         android:id="@+id/button2"
@@ -72,9 +72,9 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/montserrat"
-        android:text="Admin Page"
+        android:text="Welcome Admin!"
         android:textColor="#F48B29"
         android:textSize="34sp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -85,10 +85,10 @@
         android:id="@+id/textView6"
         android:layout_width="338dp"
         android:layout_height="101dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/montserrat"
         android:gravity="center"
-        android:text="Temple Pooja Registration App"
+        android:text="TEMPLE EVENT REGISTRATION"
         android:textColor="#BB371A"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"

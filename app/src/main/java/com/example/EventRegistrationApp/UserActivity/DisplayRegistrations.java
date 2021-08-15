@@ -1,16 +1,15 @@
-package com.example.checkpoint;
+package com.example.EventRegistrationApp.UserActivity;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
+import com.example.EventRegistrationApp.AdapterClasses.MyAdapterDisplayRegistrations;
+import com.example.EventRegistrationApp.ModelClasses.ModelDisplayReg;
+import com.example.EventRegistrationApp.R;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
@@ -28,6 +27,7 @@ public class DisplayRegistrations extends AppCompatActivity {
     private RecyclerView recyclerView;
     private MyAdapterDisplayRegistrations adapter;
     private List<ModelDisplayReg> list;
+    Button reminder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +47,7 @@ public class DisplayRegistrations extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
         DocumentReference dref = db.collection("Users").document(userId);
 
-        dref.collection("Registrations").get()
+        dref.collection("Registrations").orderBy("date").get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
@@ -65,5 +65,6 @@ public class DisplayRegistrations extends AppCompatActivity {
                         }
                     }
                 });
+
     }
 }

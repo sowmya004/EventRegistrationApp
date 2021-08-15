@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFDD"
-    tools:context=".MainActivity">
+    tools:context=".LoginCreateAccount.MainActivity">
 
 
     <TextView
@@ -64,7 +64,7 @@
         android:backgroundTint="#E45826"
         android:ems="10"
         android:fontFamily="@font/montserrat"
-        android:hint="Date"
+        android:hint="Date: dd/mm/yyyy"
         android:inputType="date"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"

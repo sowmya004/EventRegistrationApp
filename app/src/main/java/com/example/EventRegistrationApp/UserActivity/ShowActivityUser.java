@@ -1,4 +1,4 @@
-package com.example.checkpoint;
+package com.example.EventRegistrationApp.UserActivity;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -9,6 +9,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
+import com.example.EventRegistrationApp.AdapterClasses.MyAdapterUser;
+import com.example.EventRegistrationApp.ModelClasses.UserView;
+import com.example.EventRegistrationApp.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

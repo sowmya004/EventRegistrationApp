@@ -1,4 +1,4 @@
-package com.example.checkpoint;
+package com.example.EventRegistrationApp.UserActivity;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,10 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.EventRegistrationApp.ModelClasses.RegList;
+import com.example.EventRegistrationApp.R;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestoreException;
@@ -21,13 +20,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import android.content.Intent;
 import android.widget.TextView;
-import com.google.firebase.auth.AuthResult;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.sql.Ref;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -68,9 +66,7 @@ public class PoojaRegister extends AppCompatActivity implements PaymentResultLis
         date.setText("Pooja Date : " + getIntent().getStringExtra("dateINTENT"));
         desc.setText("Description : " + getIntent().getStringExtra("descINTENT"));
 
-        //reg_name = findViewById(R.id.reg_name);
-        //email = findViewById(R.id.reg_email);
-        //phone= findViewById(R.id.reg_phone);
+
         DocumentReference dref = fStore.collection("Users").document(userId);
         dref.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
@@ -78,9 +74,6 @@ public class PoojaRegister extends AppCompatActivity implements PaymentResultLis
                  rname = value.getString("FullName");
                  remail = value.getString("UserEmail");
                  rphone = value.getString("PhoneNumber");
-                //reg_name.setText(rname);
-                //email.setText(remail);
-                //phone.setText(rphone);
             }
         });
 
@@ -133,6 +126,8 @@ public class PoojaRegister extends AppCompatActivity implements PaymentResultLis
         String pdate = intent.getStringExtra("dateINTENT");
         String user_name = intent.getStringExtra("userNameIntent");
         String user_phone = intent.getStringExtra("userPhoneIntent");
+
+
 
         RegList rl = new RegList(pname, pprice, pdate, user_name, user_phone);
         FirebaseUser user = fAuth.getCurrentUser();

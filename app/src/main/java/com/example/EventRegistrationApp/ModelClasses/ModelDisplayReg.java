@@ -1,4 +1,4 @@
-package com.example.checkpoint;
+package com.example.EventRegistrationApp.ModelClasses;
 
 import com.google.firebase.database.Exclude;
 

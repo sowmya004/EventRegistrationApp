@@ -61,6 +61,18 @@
                 android:text="250"
                 android:textSize="17sp"
                 android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_reminder"
+                android:layout_width="105dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="140dp"
+                android:width="20dp"
+                android:height="100dp"
+                android:backgroundTint="#BB371A"
+                android:text="Set Reminder"
+                android:textSize="12sp" />
+
         </LinearLayout>
 
         <LinearLayout

@@ -1,4 +1,4 @@
-package com.example.checkpoint;
+package com.example.EventRegistrationApp.AdapterClasses;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,6 +12,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.EventRegistrationApp.ModelClasses.Model;
+import com.example.EventRegistrationApp.R;
+import com.example.EventRegistrationApp.AdminActivity.ShowActivity;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -52,6 +55,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             @Override
             public void onClick(View v) {
                 delete(position, model.getName());
+                Intent in = new Intent(context, ShowActivity.class);
+                context.startActivity(in);
             }
         });
     }
@@ -64,8 +69,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 snapshot.getRef().removeValue();
                 Toast.makeText(context, "Deleted Successfully", Toast.LENGTH_SHORT).show();
-                Intent in = new Intent(context, ShowActivity.class);
-                context.startActivity(in);
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {

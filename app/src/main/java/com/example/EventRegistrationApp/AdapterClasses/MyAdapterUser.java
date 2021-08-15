@@ -1,4 +1,4 @@
-package com.example.checkpoint;
+package com.example.EventRegistrationApp.AdapterClasses;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+
+import com.example.EventRegistrationApp.R;
+import com.example.EventRegistrationApp.ModelClasses.UserView;
 
 import java.util.ArrayList;
 

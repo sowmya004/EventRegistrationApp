@@ -1,29 +1,24 @@
-package com.example.checkpoint;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.EventRegistrationApp.AdminActivity;
 
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.core.view.MenuItemCompat;
 
-import android.app.SearchManager;
-import android.widget.SearchView.OnQueryTextListener;
-import android.widget.TextView;
-import android.app.SearchManager;
-import android.widget.Toast;
-
+import com.example.EventRegistrationApp.AdapterClasses.NewAdapter;
+import com.example.EventRegistrationApp.ModelClasses.ModelAllReg;
+import com.example.EventRegistrationApp.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.database.Query;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -72,27 +67,15 @@ public class Admin_AllRegistrations extends AppCompatActivity {
                                 list.add(p);
                             }
                             adapter.notifyDataSetChanged();
-                            //listcount. setText("Total count : " + listView.getCount());
+                            listcount. setText("Total count : " + listView.getCount());
                         }
                     }
                 });
+            }
 
-        //Search bar operation set filter
-//          searchView.addTextChangedListener(new TextWatcher() {
-//              @Override
-//              public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-//              }
-//              @Override
-//              public void onTextChanged(CharSequence c, int i, int i1, int i2) {
-//                  adapter.getFilter().filter(c);
-//              }
-//              @Override
-//              public void afterTextChanged(Editable editable) {
-//              }
-//          });
-    }
+
     private void searchData(String s) {
-        db.collection("AllRegistrations").whereEqualTo("date", s.toLowerCase())
+         db.collection("AllRegistrations").whereEqualTo("name", s)
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
@@ -107,7 +90,7 @@ public class Admin_AllRegistrations extends AppCompatActivity {
                             list.add(model);
                         }
                         listView.setAdapter(adapter);
-                        listcount. setText("Total count : " + listView.getCount());
+                        listcount. setText("count : " + listView.getCount());
                     }
                 });
     }
@@ -119,8 +102,8 @@ public class Admin_AllRegistrations extends AppCompatActivity {
         SearchView searchView = (SearchView) MenuItemCompat.getActionView(item);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
-            public boolean onQueryTextSubmit(String s) {
-                searchData(s);
+            public boolean onQueryTextSubmit(String date) {
+                searchData(date);
                 return false;
             }
 

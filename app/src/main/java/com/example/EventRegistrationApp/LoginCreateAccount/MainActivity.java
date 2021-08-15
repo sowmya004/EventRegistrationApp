@@ -1,4 +1,4 @@
-package com.example.checkpoint;
+package com.example.EventRegistrationApp.LoginCreateAccount;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.EventRegistrationApp.AdminActivity.Admin;
+import com.example.EventRegistrationApp.R;
+import com.example.EventRegistrationApp.UserActivity.User;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
@@ -26,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     boolean valid = true;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
+    String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,10 +72,10 @@ public class MainActivity extends AppCompatActivity {
         gotoRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), Register.class));
+                Intent in = new Intent(getApplicationContext(), Register.class);
+                startActivity(in);
             }
         });
-
     }
 
     private void checkUserAccessLevel(String uid) {
@@ -85,12 +89,15 @@ public class MainActivity extends AppCompatActivity {
 
                 if(documentSnapshot.getString("isAdmin")!=null){
                     //user is admin
-
-                    startActivity(new Intent(getApplicationContext(), Admin.class));
+                    Intent a = new Intent(getApplicationContext(), Admin.class);
+                    startActivity(a);
                     finish();
                 }
                 if(documentSnapshot.getString("isUser")!=null){
-                    startActivity(new Intent(getApplicationContext(), User.class));
+                    Intent u = new Intent(getApplicationContext(), User.class);
+                    username = documentSnapshot.getString("FullName");
+                    u.putExtra("usernameINTENT", username);
+                    startActivity(u);
                     finish();
                 }
             }
@@ -107,12 +114,13 @@ public class MainActivity extends AppCompatActivity {
         return valid;
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        if(FirebaseAuth.getInstance().getCurrentUser()!=null){
-            startActivity(new Intent(getApplicationContext(), User.class));
-            finish();
-        }
-    }
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//        if(FirebaseAuth.getInstance().getCurrentUser()!=null){
+//            Intent uintent = new Intent(getApplicationContext(), User.class);
+//            startActivity(uintent);
+//            finish();
+//        }
+//    }
 }

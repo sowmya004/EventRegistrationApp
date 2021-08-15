@@ -1,4 +1,4 @@
-package com.example.checkpoint;
+package com.example.EventRegistrationApp.AdapterClasses;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,10 +10,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import org.w3c.dom.Text;
+import com.example.EventRegistrationApp.ModelClasses.ModelAllReg;
+import com.example.EventRegistrationApp.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class NewAdapter extends ArrayAdapter<ModelAllReg> {
     Context mContext;
