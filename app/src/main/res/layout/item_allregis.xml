@@ -13,19 +13,21 @@
         android:layout_weight="50">
 
         <TextView
+            android:id="@+id/lv_pn"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
             android:gravity="center"
             android:text="Pooja Name"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:id="@+id/lv_pn"/>
+            android:textColor="#757474" />
 
         <TextView
-            android:gravity="center"
-            android:text="Date"
+            android:id="@+id/lv_pd"
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:id="@+id/lv_pd"
-            android:layout_below="@+id/lv_pn"/>
+            android:layout_below="@+id/lv_pn"
+            android:gravity="center"
+            android:text="Date"
+            android:textColor="#757474" />
     </LinearLayout>
 
     <LinearLayout
@@ -35,19 +37,21 @@
         android:layout_weight="50">
 
         <TextView
+            android:id="@+id/lv_un"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
             android:gravity="center"
             android:text="User Name"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:id="@+id/lv_un"/>
+            android:textColor="#757474" />
 
         <TextView
-            android:gravity="center"
-            android:text="User Phone"
+            android:id="@+id/lv_up"
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:id="@+id/lv_up"
-            android:layout_below="@+id/lv_u"/>
+            android:layout_below="@+id/lv_u"
+            android:gravity="center"
+            android:text="User Phone"
+            android:textColor="#757474" />
     </LinearLayout>
 
 </LinearLayout>

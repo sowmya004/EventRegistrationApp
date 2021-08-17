@@ -56,6 +56,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             public void onClick(View v) {
                 delete(position, model.getName());
                 Intent in = new Intent(context, ShowActivity.class);
+                Toast.makeText(context, "Deleted Successfully", Toast.LENGTH_LONG).show();
                 context.startActivity(in);
             }
         });

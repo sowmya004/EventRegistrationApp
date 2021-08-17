@@ -134,17 +134,4 @@ public class AddPooja extends AppCompatActivity {
         }
         return valid;
     }
-
-//    public boolean valDate(String date){
-//        DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
-//        Date valid_date = null;
-//        df.setLenient(false);
-//
-//        try{
-//            valid_date = df.parse(date);
-//            return true;
-//        } catch (Exception e) {
-//            return false;
-//        }
-//    }
 }

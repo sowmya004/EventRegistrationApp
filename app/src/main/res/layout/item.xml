@@ -29,6 +29,7 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="Pooja Name:"
+                android:textColor="#8F3232"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -38,6 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:text="Pooja 1"
+                android:textColor="#000000"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
@@ -53,6 +55,7 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="Price: ₹"
+                android:textColor="#8F3232"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -61,19 +64,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="250"
+                android:textColor="#000000"
                 android:textSize="17sp"
                 android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/btn_delete"
-                android:layout_width="83dp"
-                android:layout_height="45dp"
-                android:layout_marginLeft="190dp"
-                android:width="20dp"
-                android:height="100dp"
-                android:backgroundTint="#BB371A"
-                android:text="Delete"
-                android:textSize="12sp" />
 
         </LinearLayout>
 
@@ -87,6 +80,7 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="Date:"
+                android:textColor="#8F3232"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -96,8 +90,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:text="12/08/21"
+                android:textColor="#000000"
                 android:textSize="17sp"
                 android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="83dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="150dp"
+                android:width="20dp"
+                android:height="100dp"
+                android:backgroundTint="#BB371A"
+                android:text="Delete"
+                android:textSize="12sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -110,6 +116,7 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="Description:"
+                android:textColor="#8F3232"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -119,6 +126,7 @@
                 android:layout_height="59dp"
                 android:layout_marginStart="5dp"
                 android:text="this is Pooja 1"
+                android:textColor="#000000"
                 android:textSize="17sp"
                 android:textStyle="bold" />
         </LinearLayout>
